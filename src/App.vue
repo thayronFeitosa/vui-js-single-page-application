@@ -24,21 +24,16 @@ export default {
     return {
     titulo: 'alura pic',
     fotos:[
-      
-      {
-        url: 'https://lh3.googleusercontent.com/proxy/tpJS9gOy2lsW9Yi9b_3HUTjP4l7PDp5sW7lDfzzZsAfPChj0WC73Q31diJ8qC4JqZmnIguV5a1hkT1hcLVypKs6C08fKivAeo82-_z2o75CKH10vTOsrv5nk7WKZcnEsIA',
-        titulo: 'cachorro'
-      }, 
-    {
-      url: 'https://lh3.googleusercontent.com/proxy/tpJS9gOy2lsW9Yi9b_3HUTjP4l7PDp5sW7lDfzzZsAfPChj0WC73Q31diJ8qC4JqZmnIguV5a1hkT1hcLVypKs6C08fKivAeo82-_z2o75CKH10vTOsrv5nk7WKZcnEsIA',
-      titulo: 'cachorro'
-    }
 
     ]
     
     }
 
-  }
+  },
+  created(){
+   let promise = this.$http.get('http://localhost:3000/v1/fotos');
+   promise.then(res => console.log(res.json()));
+}
 }
 </script>
 
