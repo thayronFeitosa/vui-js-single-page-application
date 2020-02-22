@@ -1,9 +1,7 @@
 <template>
 <div>
-
-<h1>alura pic</h1>
-
-
+<h1>{{ titulo }}</h1>
+<img v-bind:src="foto.url" v-bind:alt="foto.titulo">
 </div>
 
 </template>
